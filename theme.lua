@@ -1,6 +1,6 @@
 ---------------------------------
---  "Solarized" awesome theme  --
---     By Gwenhael Le Moine    --
+--  "NightGlow" awesome theme  --
+--     By Richard Moe    --
 ---------------------------------
 
 -- Alternative icon sets and widget icons:
@@ -9,13 +9,14 @@
 -- {{{ Main
 theme = {}
 theme.default_themes_path = "/usr/share/awesome/themes"
-theme.wallpaper_cmd = { "awsetbg "..theme.default_themes_path.."/zenburn/zenburn-background.png" }
+theme.images_path =  awful.util.getdir("config").. "/themes/nightglow/" 
+theme.wallpaper_cmd = { "awsetbg " .. theme.images_path .. "awesome-bg.png" }
 theme.colors = {}
-theme.colors.base3   = "#002b36"
-theme.colors.base2   = "#073642"
-theme.colors.base1   = "#586e75"
-theme.colors.base0   = "#657b83"
-theme.colors.base00  = "#839496"
+theme.colors.base3   = "#000000"
+theme.colors.base2   = "#000000"
+theme.colors.base1   = "#000000"
+theme.colors.base0   = "#000000"
+theme.colors.base00  = "#000000"
 theme.colors.base01  = "#93a1a1"
 theme.colors.base02  = "#eee8d5"
 theme.colors.base03  = "#fdf6e3"
@@ -27,14 +28,18 @@ theme.colors.violet  = "#6c71c4"
 theme.colors.blue    = "#268bd2"
 theme.colors.cyan    = "#2aa198"
 theme.colors.green   = "#859900"
+theme.colors.turquoise = "#00adee"
+theme.colors.darkgrey = "#35363b"
+theme.colors.lightgrey = "#707284"
+
 -- }}}
 
 -- {{{ Styles
 theme.font      = "ubuntu 9"
 
 -- {{{ Colors
-theme.fg_normal  = theme.colors.base02
-theme.fg_focus   = theme.colors.base03
+theme.fg_normal  = theme.colors.turquoise
+theme.fg_focus   = theme.colors.magenta
 theme.fg_urgent  = theme.colors.base3
 
 theme.bg_normal  = theme.colors.base3
@@ -44,9 +49,9 @@ theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
-theme.border_width  = "2"
-theme.border_normal = theme.bg_normal
-theme.border_focus  = theme.bg_focus
+theme.border_width  = "1"
+theme.border_normal = theme.colors.darkgrey
+theme.border_focus  = theme.colors.lightgrey
 theme.border_marked = theme.bg_urgent
 -- }}}
 
@@ -76,7 +81,8 @@ theme.taglist_squares_unsel = theme.default_themes_path.."/zenburn/taglist/squar
 -- }}}
 
 -- {{{ Misc
-theme.awesome_icon           = theme.default_themes_path.."/zenburn/awesome-icon.png"
+-- theme.awesome_icon           = theme.default_themes_path.."/zenburn/awesome-icon.png"
+theme.awesome_icon           = theme.images_path.. "awesome-icon.png"
 theme.menu_submenu_icon      = theme.default_themes_path.."/default/submenu.png"
 -- }}}
 
